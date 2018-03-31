@@ -1,10 +1,12 @@
 # Ignore CI build directory
-/target/*
+*/target/*
 build/
 xcuserdata
 cmake-build-debug/
 .idea/
-/.settings/*
+
+# Some local files
+*/.settings/*
 .classpath
 .project
 
