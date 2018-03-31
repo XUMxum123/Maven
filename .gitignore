@@ -1,11 +1,11 @@
 # Ignore CI build directory
-target/
+/target/*
 build/
 xcuserdata
 cmake-build-debug/
 .idea/
-.setting/
-.classpath/
+/.settings/*
+.classpath
 .project
 
 # python
