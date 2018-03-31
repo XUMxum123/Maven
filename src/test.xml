@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HD>
+	<disk name="C">
+		<capacity>60G</capacity>
+		<directories>100</directories>
+		<files>356</files>
+	</disk>    
+	<disk name="D">
+		<capacity>100G</capacity>
+		<directories>180</directories>
+		<files>586</files>
+	</disk> 
+	<disk name="E">
+		<capacity>90G</capacity>
+		<directories>170</directories>
+		<files>656</files>
+	</disk> 
+</HD>
