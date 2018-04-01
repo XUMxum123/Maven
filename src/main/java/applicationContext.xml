@@ -1,22 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+<beans xmlns:context="http://www.springframework.org/schema/context"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/context  
+     http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
+	<context:component-scan base-package="com.xum,com.managerdao" />
 	<bean id="chineseperson" class="com.xum.ChinesePerson">
-		<property name="name">
-			<value>Tom</value>
-		</property>
-		<property name="age">
-			<value>12</value>
-		</property>
+		<property name="name"><value>Tom</value></property>
+		<property name="age"><value>12</value></property>
+	</bean>
+	<bean id="chineseperson2" class="com.xum.ChinesePerson">
+		<property name="name"><value>XU</value></property>
+		<property name="age"><value>23</value></property>
 	</bean>
 	<bean id="americaperson" class="com.xum.AmericaPerson">
-		<property name="name">
-			<value>Jack</value>
+		<property name="name"><value>Jack</value></property>
+		<property name="age"><value>15</value></property>
+	</bean>
+	<bean id="userDao" class="com.managerdao.UserDao">
+		<property name="id" value="12345"></property>
+		<property name="name" value="James"></property>
+		<property name="age" value="35"></property>
+		<property name="province" value="XM"></property>
+		<property name="sex" value="man"></property>
+		<property name="sets">
+			<set>
+				<value>set1</value>
+				<value>set2</value>
+			</set>
 		</property>
-		<property name="age">
-			<value>15</value>
+		<property name="lists">
+			<list>
+				<value>list1</value>
+				<value>list2</value>
+			</list>
+		</property>
+		<property name="maps">
+			<map>
+				<entry key="1" value="map1"></entry>
+				<entry key="2" value="map2"></entry>
+			</map>
 		</property>
 	</bean>
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    	<property name="basename">
+            <value>resources/language</value>
+        </property>
+<!--    <property name="basenames">
+            <list>
+                <value>resources/language</value>
+            </list>
+        </property> -->
+    </bean>
 </beans>
