@@ -24,8 +24,19 @@ public class App
     }
     
     private static void internationlization(ApplicationContext context) {
+    	/* 语言加代码	   语言加国家
+			zh_CN	中文简体，中国
+			zh_TW	中文繁体，台湾
+			zh_HK	中文繁体，香港
+			en_US	英语，美国
+			en_GB	英语，英国
+			es_ES	西班牙
+			es_US	西班牙语，美国
+			en_ZA	英语，津巴布韦*/
     	String[] name = {"welcome"};
-    	String welcome = context.getMessage("welcome", name, Locale.getDefault());
+    	//String welcome = context.getMessage("welcome", name, Locale.getDefault());
+    	//String welcome = context.getMessage("welcome", name, Locale.US);
+    	String welcome = context.getMessage("welcome", name, Locale.TAIWAN);
     	System.out.println("welcome=" + welcome);
     }
     
